@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+/* *********** header navbar */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+
+  padding: 0.3rem 0.5rem;
+  /* border: 1px solid red; */
+}
+.nav-btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.nav-btn:hover {
+  /* box-shadow: 1px 2px 5px #888; */
+  text-decoration: underline;
+}
+.menu-icon {
+  cursor: pointer;
+  font-size: 1.5rem;
+  width: 100%;
+}
+/* .menu-icon:hover{
+  background-color: #888;
+
+} */
+.profile-item-container {
+  /* border: 1px solid blue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 100%;
+  width: 2.875rem;
+  height: 2.875rem;
+  overflow: hidden;
+}
+.profile-item-container:hover {
+  background-color: rgb(173, 173, 173);
+}
+/* .profile-image-container img{
+  width: 100%;
+} */
+.profile-image {
+  width: 100%;
+  font-size: 2.775rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* ************** Home main */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-grow: 1;
+  height: 80vh;
+  gap: 1rem;
+
+  /* border: 1px solid red; */
+}
+.banner {
+  width: 30%;
+  position: relative;
+}
+.search-bar-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  width: 80%;
+  height: 2.75rem;
+  max-width: 584px;
+  border: 0.5px solid rgb(173, 173, 173);
+  border-radius: 2rem;
+  padding: 0.7rem;
+}
+.search-bar {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: medium;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar-container:hover {
+  box-shadow: 1px 1px 5px rgb(173, 173, 173);
+}
+.microphone-search {
+  cursor: pointer;
+  font-size: large;
+}
+@media screen and (max-width: 480px) {
+  main {
+    justify-content: flex-start;
+    margin: 2rem 0;
+  }
+  .search-bar-container {
+    height: 2rem;
+  }
+  .banner {
+    width: 40%;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.btn-container button {
+  background-color: #f8f9fa;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  border: none;
+}
+.btn-container button:hover {
+  border: 0.5px solid rgb(173, 173, 173);
 }
